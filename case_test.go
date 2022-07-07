@@ -81,3 +81,9 @@ func ExampleSplitCamelCase() {
 	fmt.Printf("%#v\n", SplitCamelCase("binaryJSONAbstractWriter"))
 	// Output: []string{"binary", "JSON", "Abstract", "Writer"}
 }
+
+func TestUppercaseFirst(t *testing.T) {
+	source := "name"
+	expected := "Name"
+	Assert(t, expected, UppercaseFirst(source), "Test UppercaseFirst is not successful\n", UppercaseFirst(source))
+}

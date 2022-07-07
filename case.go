@@ -81,3 +81,11 @@ func SplitCamelCase(str string) []string {
 	}
 	return words
 }
+
+func UppercaseFirst(str string) string {
+	if len(str) == 0 {
+		return ""
+	}
+	target := str[0]
+	return strings.Join([]string{strings.ToUpper(string(target)), str[1:]}, "")
+}
